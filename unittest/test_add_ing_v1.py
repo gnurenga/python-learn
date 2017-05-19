@@ -1,5 +1,11 @@
+"""This is a program to test add_ing_v1.py and add_ing_v2.py
+
+As of now we need import add_ing_v1 or add_ing_v2 to run
+unittest on either code.
+"""
 import unittest
-from  add_ing_v2 import *
+from add_ing_v1 import *
+#from add_ing_v2 import *
 
 class add_ing_test_case(unittest.TestCase):
 

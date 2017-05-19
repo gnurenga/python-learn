@@ -1,4 +1,27 @@
+"""This is a program to add verb+ing form.
+
+1. For word end with `e` drop `e`
+2. For word ends in consonent-vowel-consonent
+double the last letter
+3. For other words just add `ing` at the end
+
+The issue found in the previous version is fixed
+in this version. In order to understand Unittest
+this code is written
+
+"""
+
+
 def isVerbends_with_e(word):
+    """ This function will find the give word ends with `e`
+    Args:
+        word (str): english verb
+
+    Returns:
+       True or False (bool): It the verb ends with `e`
+       it will return True or else false
+    """
+        
     if len(word) > 3:
         if word[-1] == 'e':
             return True
@@ -7,6 +30,19 @@ def isVerbends_with_e(word):
 
 
 def isVerbConsonent(word):
+    """ This function will find the given wors is in
+    consonent-vowel-consonent format.
+
+    Args:
+        word (str): english verb
+
+    Returns:
+       True or False (bool): It the verb is of
+       consonent-vowel-consonent format then
+       it will return True or else false
+    """
+    vowels = "aeiou"
+
     vowels = "aeiou"
 
     if len(word) != 3:
@@ -20,6 +56,14 @@ def isVerbConsonent(word):
 
 
 def add_ing(word):
+    """This function will add `ing` format to the given word
+
+    Args:
+        word (str): Verb
+
+    Returns:
+       This function will add `ing` and return the verb
+    """
 
     if isVerbends_with_e(word):
         return word[:-1] + "ing"
